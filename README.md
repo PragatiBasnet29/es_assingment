@@ -3,6 +3,8 @@ Solution code of past 9 questions on vhdl
 
 #### Setup Instructions
 
+This is done in ubuntu virtual box.
+
 #### 1. Install `ghdl` and `gtkwave`:
 
 ```bash
