@@ -1,7 +1,7 @@
 # es_assingment
 solution code of past 9 questions on vhdl
 
-#Setup Instructions
+#### Setup Instructions
 
 #### 1. Install `ghdl` and `gtkwave`:
 
