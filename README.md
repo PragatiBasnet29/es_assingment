@@ -78,14 +78,8 @@ sudo apt install make
 
 Contributions to this project are welcome! To contribute, please fork this repository, make your changes, and submit a pull request.
 
-### License
-
-This project is licensed under the [License Name]. See the [LICENSE](LICENSE) file for details.
 
 ### Contact
 
-For any questions or concerns, please contact [Your Name] at [email@example.com].
+For any questions or concerns, please contact Pragati basnet at pragatibasnet123@gmail.com
 
----
-
-You can customize the placeholders like `[Project Name]`, `[brief description of your project]`, `[License Name]`, `[Your Name]`, and `[email@example.com]` with your specific project details. Additionally, you may want to include more detailed instructions or explanations depending on your project's requirements.
