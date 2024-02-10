@@ -81,5 +81,5 @@ Contributions to this project are welcome! To contribute, please fork this repos
 
 ### Contact
 
-For any questions or concerns, please contact Pragati basnet at pragatibasnet123@gmail.com
+For any questions or concerns, please contact Pragati Basnet at pragatibasnet123@gmail.com or Abhishek Laudari Bhat at ......@gmail.com
 
