@@ -1,4 +1,4 @@
-# es_assingment
+# Es_assingment
 Solution code of past 9 questions of embedded system on vhdl
 
 ### Setup Instructions
