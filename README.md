@@ -1,7 +1,7 @@
 # es_assingment
 Solution code of past 9 questions of embedded system on vhdl
 
-#### Setup Instructions
+### Setup Instructions
 
 This is done in ubuntu operating system.
 
