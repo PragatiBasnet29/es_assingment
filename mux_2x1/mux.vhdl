@@ -1,30 +1,14 @@
--- library ieee;
--- use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
--- entity mux is
--- port(
---     a0,a1,s0:in std_logic;
---     y:out std_logic
--- );
--- end mux;
-
--- architecture mux_arch of mux is
--- begin
---     y <= ((not s0) and a0) or (s0 and a1);
--- end mux_arch;
-
---code for MUX entity
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity my_mux is
-    port (
-        input_a0, input_a1, select_s0: in std_logic;
-        output_y: out std_logic
+ENTITY my_mux IS
+    PORT (
+        input_a0, input_a1, select_s0 : IN STD_LOGIC;
+        output_y : OUT STD_LOGIC
     );
-end my_mux;
+END my_mux;
 
-architecture mux_arch of my_mux is
-begin
-    output_y <= ((not select_s0) and input_a0) or (select_s0 and input_a1);
-end mux_arch;
+ARCHITECTURE mux_arch OF my_mux IS
+BEGIN
+    output_y <= ((NOT select_s0) AND input_a0) OR (select_s0 AND input_a1);
+END mux_arch;

@@ -1,25 +1,25 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity my_demux_tb is
-end my_demux_tb;
+ENTITY my_demux_tb IS
+END my_demux_tb;
 
-architecture tb_arch of my_demux_tb is
+ARCHITECTURE tb_arch OF my_demux_tb IS
     -- Component declaration
-    component my_demux
-        port(
-            in_a, sel2, sel1, sel0: in std_logic;
-            out7, out6, out5, out4, out3, out2, out1, out0: out std_logic
+    COMPONENT my_demux
+        PORT (
+            in_a, sel2, sel1, sel0 : IN STD_LOGIC;
+            out7, out6, out5, out4, out3, out2, out1, out0 : OUT STD_LOGIC
         );
-    end component;
+    END COMPONENT;
 
     -- Signals declaration
-    signal in_a_tb, sel2_tb, sel1_tb, sel0_tb: std_logic := '0';
-    signal out7_tb, out6_tb, out5_tb, out4_tb, out3_tb, out2_tb, out1_tb, out0_tb: std_logic;
+    SIGNAL in_a_tb, sel2_tb, sel1_tb, sel0_tb : STD_LOGIC := '0';
+    SIGNAL out7_tb, out6_tb, out5_tb, out4_tb, out3_tb, out2_tb, out1_tb, out0_tb : STD_LOGIC;
 
-begin
+BEGIN
     -- Instantiate the my_demux entity
-    dut: my_demux port map (
+    dut : my_demux PORT MAP(
         in_a => in_a_tb,
         sel2 => sel2_tb,
         sel1 => sel1_tb,
@@ -35,28 +35,39 @@ begin
     );
 
     -- Stimulus process
-    stimulus_proc: process
-    begin
+    stimulus_proc : PROCESS
+    BEGIN
         -- Initialize ins
-        in_a_tb <= '0';
+        in_a_tb <= '1';
         sel2_tb <= '0';
         sel1_tb <= '0';
         sel0_tb <= '0';
 
         -- Apply stimulus
-        wait for 10 ns;
+        WAIT FOR 10 ns;
         in_a_tb <= '1';
         sel2_tb <= '0';
         sel1_tb <= '0';
+        sel0_tb <= '1';
+        WAIT FOR 10 ns;
+        in_a_tb <= '1';
+        sel2_tb <= '0';
+        sel1_tb <= '1';
         sel0_tb <= '0';
-        wait for 10 ns;
+        WAIT FOR 10 ns;
+        in_a_tb <= '1';
+        sel2_tb <= '1';
+        sel1_tb <= '1';
+        sel0_tb <= '0';
+        WAIT FOR 10 ns;
+        in_a_tb <= '1';
         sel2_tb <= '1';
         sel1_tb <= '1';
         sel0_tb <= '1';
-        wait for 10 ns;
+        WAIT FOR 10 ns;
 
         -- End simulation
-        wait;
-    end process;
+        WAIT;
+    END PROCESS;
 
-end tb_arch;
+END tb_arch;
