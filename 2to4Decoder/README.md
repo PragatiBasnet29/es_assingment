@@ -38,6 +38,9 @@ The `my_decoder_tb` entity is a test bench for the `my_decoder` entity.
 - **Input:** `in_1 = '1'`, `in_0 = '1'`, `enable = '1'`.
 - **Expected Output:** `out_3 = '1'`, `out_2 = '0'`, `out_1 = '0'`, `out_0 = '0'`.
 
+## Output Diagram
+
+![2to4decoder](2to4decoder.png)
 
 ## Simulation
 
@@ -46,6 +49,3 @@ To compile and run the simulation, execute the following commands:
 ```bash
 make
 
-## Output Diagram
-
-![2to4decoder](2to4decoder.png)
