@@ -24,7 +24,7 @@ The `my_decoder_tb` entity is a test bench for the `my_decoder` entity.
 
 ## Block Diagram
 
-![Block Diagram](2to4decoder.png)
+![Block Diagram](2_to_4_decoder.jpg)
 
 ## Test Cases
 
