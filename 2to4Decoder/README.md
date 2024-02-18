@@ -48,4 +48,4 @@ make
 
 ## Output Diagram
 
-![Output Diagram](2to4decoder.png)
+![2to4decoder](2to4decoder.png)
