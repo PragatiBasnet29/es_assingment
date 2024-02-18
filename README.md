@@ -1,9 +1,9 @@
-# es_assingment
-Solution code of past 9 questions on vhdl
+# Es_assingment
+Solution code of past 9 questions of embedded system on vhdl
 
-#### Setup Instructions
+### Setup Instructions
 
-This is done in ubuntu virtual box.
+This is done in ubuntu operating system.
 
 #### 1. Install `ghdl` and `gtkwave`:
 

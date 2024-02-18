@@ -1,105 +1,46 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
--- library ieee;
--- use ieee.std_logic_1164.all;
+ENTITY my_mux_tb IS
+END my_mux_tb;
 
--- entity mux_tb  is
--- end mux_tb;
-
--- architecture mux_arch of mux_tb is
--- signal a0,a1,s0,y:std_logic;
-
--- component mux
---     port(
---         a0,a1,s0: in std_logic;
---         y: out std_logic
---         );
--- end component mux;
-
--- begin
---     UUT: mux
---     port map(a0 => a0, a1 => a1, s0 => s0, y => y);
-
-
---     stimulus_process: process
---     begin
-
---         --test case 1
---         s0 <= '0';
---         a0 <= '0';
---         a1 <= '0';
---         wait for 10 ns;
-
---         --test case 2
---         s0 <= '0';
---         a0 <= '0';
---         a1 <= '1';
---         wait for 10 ns;
-
---         --test case 3
---         s0 <= '0';
---         a0 <= '1';
---         a1 <= '0';
---         wait for 10 ns;
---         --test case 4
---         s0 <= '0';
---         a0 <= '1';
---         a1 <= '1';
---         wait for 10 ns;
-
---         --test case 5
---         s0 <= '1';
---         a0 <= '0';
---         a1 <= '0';
---         wait for 10 ns;
-
---         --test case 6
---         s0 <= '1';
---         a0 <= '0';
---         a1 <= '1';
---         wait for 10 ns;
---         wait;
---     end process stimulus_process;
--- end mux_arch;
- 
-        
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity my_mux_tb is
-end my_mux_tb;
-
-architecture tb_arch of my_mux_tb is
-    component my_mux is
-        port (
-            a0, a1, s0: in std_logic;
-            y: out std_logic
+ARCHITECTURE tb_arch OF my_mux_tb IS
+    COMPONENT my_mux IS
+        PORT (
+            input_a0, input_a1, select_s0 : IN STD_LOGIC;
+            output_y : OUT STD_LOGIC
         );
-    end component my_mux;
+    END COMPONENT my_mux;
 
-    signal a0_tb, a1_tb, s0_tb, y_tb: std_logic := '0';
-begin
-    dut: my_mux port map (a0 => a0_tb, a1 => a1_tb, s0 => s0_tb, y => y_tb);
+    SIGNAL input_a0_tb, input_a1_tb, select_s0_tb, output_y_tb : STD_LOGIC := '0';
+BEGIN
+    dut : my_mux PORT MAP(input_a0 => input_a0_tb, input_a1 => input_a1_tb, select_s0 => select_s0_tb, output_y => output_y_tb);
 
-    stimulus_proc: process
-    begin
-        a0_tb <= '0';
-        a1_tb <= '1';
-        s0_tb <= '0';
-        wait for 10 ns;
-        
-        a0_tb <= '1';
-        a1_tb <= '0';
-        s0_tb <= '1';
-        wait for 10 ns;
-        
-        a0_tb <= '0';
-        a1_tb <= '0';
-        s0_tb <= '1';
-        wait for 10 ns;
-        
+    stimulus_proc : PROCESS
+    BEGIN
+
+        input_a0_tb <= '1';
+        input_a1_tb <= '1';
+        select_s0_tb <= '1';
+        WAIT FOR 10 ns;
+
+        input_a0_tb <= '0';
+        input_a1_tb <= '1';
+        select_s0_tb <= '0';
+        WAIT FOR 10 ns;
+
+        input_a0_tb <= '1';
+        input_a1_tb <= '0';
+        select_s0_tb <= '1';
+        WAIT FOR 10 ns;
+
+        input_a0_tb <= '0';
+        input_a1_tb <= '0';
+        select_s0_tb <= '1';
+        WAIT FOR 10 ns;
+
         -- Add more test cases or stimulus here
-        
-        wait;
-    end process;
-end tb_arch;
 
+        WAIT;
+    END PROCESS;
+END tb_arch;

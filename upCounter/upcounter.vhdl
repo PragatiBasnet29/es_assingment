@@ -1,36 +1,87 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
-entity upcounter_tb is
-end upcounter_tb;
+ENTITY T_flipflop
+    IS
+    PORT (
+        T, CLK, RST : IN STD_LOGIC;
+        Q : OUT STD_LOGIC);
+END T_flipflop
+;
 
-architecture upcounter_arch of upcounter_tb is
-    component upcounter is 
-        port (
-            clk, rst: in std_logic;
-            q: out std_logic_vector(2 downto 0)
-        );
-    end component upcounter;
+ARCHITECTURE T_flipflop
+    OF T_flipflop
+    IS
+    SIGNAL Q_temp : STD_LOGIC;
+BEGIN
+    PROCESS (CLK, RST)
+    BEGIN
+        IF RST = '1' THEN
+            Q_temp <= '0';
+        ELSIF rising_edge(CLK) THEN
+            IF T = '1' THEN
+                Q_temp <= NOT Q_temp;
+            ELSE
+                Q_temp <= Q_temp;
+            END IF;
+        END IF;
+    END PROCESS;
 
-    signal clk, rst: std_logic := '0';
-    signal q: std_logic_vector(2 downto 0);
+    Q <= Q_temp;
+END T_flipflop
+;
 
-begin
-    --counter1:upcounter port map (clk => clk, rst => rst, q => q);
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
-    process
-    begin
-        clk <= '0';
-        wait for 5 ns;
-        clk <= '1';
-        wait for 5 ns;
-    end process;
+ENTITY AND_G IS
+    PORT (
+        A, B : IN STD_LOGIC;
+        Z : OUT STD_LOGIC);
+END AND_G;
 
-    process
-    begin
-        rst <= '1';
-        wait for 10 ns;
-        rst <= '0';
-        wait for 80 ns;
-    end process;
-end upcounter_arch;
+ARCHITECTURE AND_G OF AND_G IS
+BEGIN
+    Z <= A AND B;
+
+END AND_G;
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY up_counter IS
+    PORT (
+        CLK, RST : IN STD_LOGIC;
+        Q : OUT STD_LOGIC_VECTOR(2 DOWNTO 0));
+END up_counter;
+
+ARCHITECTURE up_counter OF up_counter IS
+    COMPONENT AND_G IS
+        PORT (
+            A, B : IN STD_LOGIC;
+            Z : OUT STD_LOGIC);
+    END COMPONENT AND_G;
+
+    COMPONENT T_flipflop
+        IS
+        PORT (
+            T, CLK, RST : IN STD_LOGIC;
+            Q : OUT STD_LOGIC);
+    END COMPONENT T_flipflop
+    ;
+    SIGNAL QA, QB, QC, TC : STD_LOGIC;
+
+BEGIN
+    T1 : T_flipflop
+    PORT MAP(T => '1', CLK => CLK, RST => RST, Q => QA);
+    T2 : T_flipflop
+    PORT MAP(T => QA, CLK => CLK, RST => RST, Q => QB);
+    A1 : AND_G PORT MAP(A => QA, B => QB, Z => TC);
+    T3 : T_flipflop
+    PORT MAP(T => TC, CLK => CLK, RST => RST, Q => Q(2));
+    Q(0) <= '1' WHEN QA = '1' ELSE
+    '0';
+    Q(1) <= '1' WHEN QB = '1' ELSE
+    '0';
+
+END up_counter;
