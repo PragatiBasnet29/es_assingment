@@ -23,7 +23,7 @@ The `my_gcd` entity represents a GCD calculator.
 - **Input:** `input_a = '10'`, `input_b = '15'`.
 - **Expected Output:** `gcd_result = '5'`.
 
-### Test Case 1: 
+### Test Case 2: 
 
 - **Input:** `input_a = '6789'`, `input_b = '666'`.
 - **Expected Output:** `gcd_result = '3'`.
