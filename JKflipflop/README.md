@@ -1,4 +1,4 @@
-# VHDL Project: Entities and Test Cases
+# Write a VHDL code for a JK flipflop.
 
 This repository contains VHDL code for several entities and their corresponding test benches, along with descriptions of the entities, test cases, and diagrams.
 
