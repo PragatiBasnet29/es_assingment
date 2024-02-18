@@ -4,7 +4,7 @@ This repository contains VHDL code for a Demultiplexer (`my_demux`) and its corr
 
 ## Entities
 
-###1. `my_demux`
+### 1. `my_demux`
 
 The `my_demux` entity represents a Demultiplexer with one input and eight outputs.
 
@@ -14,7 +14,7 @@ The `my_demux` entity represents a Demultiplexer with one input and eight output
 - `sel2`, `sel1`, `sel0`: Select signals.
 - `out7` to `out0`: Output signals.
 
-###2. `my_demux_tb`
+### 2. `my_demux_tb`
 
 The `my_demux_tb` entity is a test bench for the `my_demux` entity.
 
