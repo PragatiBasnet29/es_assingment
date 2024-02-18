@@ -1,18 +1,17 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity my_decoder is 
-    port(
-        in_1, in_0, enable: in std_logic;
-        out_3, out_2, out_1, out_0: out std_logic
+ENTITY my_decoder IS
+    PORT (
+        in_1, in_0, enable : IN STD_LOGIC;
+        out_3, out_2, out_1, out_0 : OUT STD_LOGIC
     );
-end my_decoder;
+END my_decoder;
 
-architecture decoder_arch of my_decoder is 
-begin
-    out_3 <= enable and in_1 and in_0;
-    out_2 <= enable and in_1 and (not in_0);
-    out_1 <= enable and (not in_1) and in_0;
-    out_0 <= enable and (not in_1) and (not in_0);
-end decoder_arch;
-
+ARCHITECTURE decoder_arch OF my_decoder IS
+BEGIN
+    out_3 <= enable AND in_1 AND in_0;
+    out_2 <= enable AND in_1 AND (NOT in_0);
+    out_1 <= enable AND (NOT in_1) AND in_0;
+    out_0 <= enable AND (NOT in_1) AND (NOT in_0);
+END decoder_arch;

@@ -1,25 +1,25 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity my_decoder_tb is
-end my_decoder_tb;
+ENTITY my_decoder_tb IS
+END my_decoder_tb;
 
-architecture tb_arch of my_decoder_tb is 
+ARCHITECTURE tb_arch OF my_decoder_tb IS
     -- Component declaration
-    component my_decoder
-        port(
-            in_1, in_0, enable: in std_logic;
-            out_3, out_2, out_1, out_0: out std_logic
+    COMPONENT my_decoder
+        PORT (
+            in_1, in_0, enable : IN STD_LOGIC;
+            out_3, out_2, out_1, out_0 : OUT STD_LOGIC
         );
-    end component;
+    END COMPONENT;
 
     -- Signals declaration
-    signal in_1_tb, in_0_tb, enable_tb: std_logic := '0';
-    signal out_3_tb, out_2_tb, out_1_tb, out_0_tb: std_logic;
+    SIGNAL in_1_tb, in_0_tb, enable_tb : STD_LOGIC := '0';
+    SIGNAL out_3_tb, out_2_tb, out_1_tb, out_0_tb : STD_LOGIC;
 
-begin
+BEGIN
     -- Instantiate the my_decoder entity
-    dut: my_decoder port map (
+    dut : my_decoder PORT MAP(
         in_1 => in_1_tb,
         in_0 => in_0_tb,
         enable => enable_tb,
@@ -30,23 +30,23 @@ begin
     );
 
     -- Stimulus process
-    stimulus_proc: process
-    begin
+    stimulus_proc : PROCESS
+    BEGIN
         -- Initialize ins
         in_1_tb <= '0';
         in_0_tb <= '0';
         enable_tb <= '0';
+        WAIT FOR 10 ns;
 
         -- Apply stimulus
-        wait for 10 ns;
         in_1_tb <= '1';
-        wait for 10 ns;
+        WAIT FOR 10 ns;
         in_0_tb <= '1';
         enable_tb <= '1';
-        wait for 10 ns;
+        WAIT FOR 10 ns;
 
         -- End simulation
-        wait;
-    end process;
+        WAIT;
+    END PROCESS;
 
-end tb_arch;
+END tb_arch;
