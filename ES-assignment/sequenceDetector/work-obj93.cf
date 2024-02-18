@@ -1,7 +1,0 @@
-v 4
-file . "sequence_detector.vhdl" "fe95e5fec2fd0bb3ce4227a60439f5be3c41be0f" "20240218101631.203":
-  entity my_sequence at 1( 0) + 0 on 37;
-  architecture seq_arch of my_sequence at 13( 206) + 0 on 38;
-file . "sequence_detector_tb.vhdl" "fd05e12265778fa69c6f68d7a62ac14faa66ccd8" "20240218101631.224":
-  entity my_sequence_tb at 1( 0) + 0 on 39;
-  architecture tb_arch of my_sequence_tb at 7( 90) + 0 on 40;

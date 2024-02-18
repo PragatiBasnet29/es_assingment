@@ -1,7 +1,0 @@
-v 4
-file . "gcd.vhdl" "9b23579f7f5b4ca4733cae8e17e2216032d9f606" "20240210080431.710":
-  entity my_gcd at 62( 1319) + 0 on 33;
-  architecture behavior_gcd of my_gcd at 73( 1516) + 0 on 34;
-file . "gcdTB.vhdl" "e279bb6837e5ac0954ff12e240bcf737dd5d16e7" "20240210080431.723":
-  entity my_gcd_tb at 50( 795) + 0 on 35;
-  architecture tb_arch of my_gcd_tb at 56( 875) + 0 on 36;

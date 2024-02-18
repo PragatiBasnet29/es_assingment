@@ -1,7 +1,0 @@
-v 4
-file . "JKflipflop.vhdl" "7848b48b5aded24e827fc36bc88cfeaada6a99b0" "20240218110220.594":
-  entity my_jk at 1( 0) + 0 on 41;
-  architecture jk_arch of my_jk at 11( 163) + 0 on 42;
-file . "JKflipflopTB.vhdl" "d01a4049526d3797f64c16c35ab4ffb8280100ea" "20240218110220.616":
-  entity my_jk_tb at 1( 0) + 0 on 43;
-  architecture tb_arch of my_jk_tb at 7( 78) + 0 on 44;

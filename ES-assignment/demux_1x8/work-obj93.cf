@@ -1,7 +1,0 @@
-v 4
-file . "demuxTB.vhdl" "c1fb2c79ab0afb0d073b7c317608c68c7f3a6004" "20240210073342.250":
-  entity my_demux_tb at 1( 0) + 0 on 33;
-  architecture tb_arch of my_demux_tb at 7( 84) + 0 on 34;
-file . "demux.vhdl" "142d5c9d79b4b27deb8d7cd3bb5c5224b838deb9" "20240210073342.222":
-  entity my_demux at 1( 0) + 0 on 31;
-  architecture demux_arch of my_demux at 11( 195) + 0 on 32;
