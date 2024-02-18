@@ -1,0 +1,53 @@
+$date
+  Sat Feb 10 15:22:01 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module my_mux_tb $end
+$var reg 1 ! input_a0_tb $end
+$var reg 1 " input_a1_tb $end
+$var reg 1 # select_s0_tb $end
+$var reg 1 $ output_y_tb $end
+$scope module dut $end
+$var reg 1 % input_a0 $end
+$var reg 1 & input_a1 $end
+$var reg 1 ' select_s0 $end
+$var reg 1 ( output_y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+1!
+1"
+1#
+1$
+1%
+1&
+1'
+1(
+#10000000
+0!
+0#
+0$
+0%
+0'
+0(
+#20000000
+1!
+0"
+1#
+1%
+0&
+1'
+#30000000
+0!
+0%
+#40000000

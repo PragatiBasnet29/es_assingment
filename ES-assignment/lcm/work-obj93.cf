@@ -1,0 +1,7 @@
+v 4
+file . "lcmTB.vhdl" "039fe107762245f8ed497579b60c6b8f0a2f11d4" "20240210083051.406":
+  entity my_lcm_tb at 48( 781) + 0 on 37;
+  architecture tb_arch of my_lcm_tb at 54( 861) + 0 on 38;
+file . "lcm.vhdl" "f67b2fee18f6d1ef4ab9ab08c366bce8f10152bc" "20240210083051.385":
+  entity my_lcm at 63( 1337) + 0 on 35;
+  architecture lcm_arch of my_lcm at 74( 1534) + 0 on 36;
