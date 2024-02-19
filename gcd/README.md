@@ -28,6 +28,18 @@ The `my_gcd` entity represents a GCD calculator.
 - **Input:** `input_a = '6789'`, `input_b = '666'`.
 - **Expected Output:** `gcd_result = '3'`.
 
+## Algorithm
+
+-  **Step 1:** Let `x, y` be the two numbers.
+-  **Step 2:** IF `x` < `y`. Then `Swap`.
+-  **Step 3:** IF `y=0`. Goto step 5.
+               ELSE `r= x mod y`
+                    `x = y` and `y = r`
+               END IF
+-  **Step 4:** Repeat step 3 until `y > 0`.
+-  **Step 5:** Output `GCD = x`
+-  **Step 6:** END
+
 ## Output Diagram
 
 ![Output Diagram](gcd.png)
