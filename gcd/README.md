@@ -40,6 +40,11 @@ The `my_gcd` entity represents a GCD calculator.
 -  **Step 5:** Output `GCD = x`
 -  **Step 6:** END
 
+## State Diagram
+
+![State Diagram](GCD.png)
+
+
 ## Output Diagram
 
 ![Output Diagram](gcd.png)
