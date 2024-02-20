@@ -47,6 +47,10 @@ The `my_lcm` entity represents an LCM calculator.
 -  **Step 6:** Output `LCM = z / GCD`
 -  **Step 6:** END
 
+## State Diagram
+
+![State Diagram](LCM.png)
+
 ## Output Diagram
 
 ![Output Diagram](lcm.png)
