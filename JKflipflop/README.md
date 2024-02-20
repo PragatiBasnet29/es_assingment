@@ -37,7 +37,7 @@ The my_jk_tb entity is a test bench for the my_jk_tb entity.
 
 ## State Diagram
 
-![State Diagram](Jk.jpg)
+![State Diagram](clab4img5.gif)
 
 ## Output Diagram
 
